@@ -10,6 +10,8 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+        classpath("io.springfox:springfox-swagger2:2.7.0")
+        classpath("io.springfox:springfox-swagger-ui:2.7.0")
     }
 }
 
@@ -30,6 +32,9 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
             'org.springframework.cloud:spring-cloud-starter-hystrix-dashboard',
             'org.springframework.cloud:spring-cloud-starter-eureka-server'
+
+    compile 'io.springfox:springfox-swagger2:2.7.0',
+            'io.springfox:springfox-swagger-ui:2.7.0'
 }
 
 defaultTasks 'clean', 'bootRepackage'
